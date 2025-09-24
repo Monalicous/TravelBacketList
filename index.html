@@ -38,6 +38,72 @@
             border-radius: 5px;
         }
 
+        #intro {
+            min-height: 100vh;
+            background-position: center;
+            position: relative;
+            background-size: cover;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+
+        .intro-overlay {
+            position: relative;
+            z-index: 1;
+            /*This keeps the text above overlay*/
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 50px;
+        }
+
+        #intro h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        #intro p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        section {
+            padding: 64px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        section p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 15px;
+        }
+
+        section ul {
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
         footer img {
             display: block;
             margin: 0 auto 10px;
@@ -45,9 +111,16 @@
         }
 
         footer p {
-            margin: 0;
+            margin: 5px 0;
             font-size: 14px;
-            color: #ccc;
+            color: #555;
+        }
+
+        #typing-text {
+            font-size: 20px;
+            line-height: 1.6;
+            padding-right: 5px;
+            white-space: pre-wrap;
         }
     </style>
 
@@ -57,6 +130,7 @@
     <!--Navigation Bar-->
     <div class="w3-top">
         <div class="w3-bar w3-white w3-opacity w3-large w3-hover-opacity-off">
+            <a href="#intro" class="w3-bar-item w3-button">Intro</a>
             <a href="#mykonos" class="w3-bar-item w3-button">Mykonos</a>
             <a href="#santorini" class="w3-bar-item w3-button">Santorini</a>
             <a href="#phuket" class="w3-bar-item w3-button">Phuket</a>
@@ -67,6 +141,19 @@
 
         </div>
     </div>
+    <!--Introduction-->
+    <header id="intro" class="bgimg w3-display-container"
+        style="background-image:url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/174/147/original/pexels-sam-willis-457311-1154619.jpg?1758718219')">
+        <!--Dark Overlay-->
+        <div class="overlay"></div>
+
+        <div class="intro-overlay w3-padding w3-white w3-lightgrey w3-opacity-min">
+            <h1 class="w3-jumbo">My Travel Bucket Advetures 🌏</h1>
+            <p id="typing-text">
+            </p>
+        </div>
+    </header>
+
     <!--Mykonos-->
     <header id="mykonos" class="bgimg w3-display-container"
         style="background-image:url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/173/798/original/pexels-apasaric-1285625.jpg?1757963786')">
@@ -75,6 +162,18 @@
             <h1 class="w3-xxlarge">Mykonos</h1>
         </div>
     </header>
+    <section>
+        <h2>My Experience in Mykonos</h2>
+        <p>Mykonos was everything I imagined and more. The charming whitewashed streets, friendly people and breath
+            taking sunsets made this trip uforgertable.</p>
+        <h3>Highlights</h3>
+        <ul>
+            <li>Exploring the iconic windmills</li>
+            <li>Relaxing on the beautiful beaches</li>
+            <li>Enjoying the vibrant nightlife</li>
+            <li>Tasting delicious Greek cuisine</li>
+        </ul>
+    </section>
 
     <!--Santorini-->
     <header id="santorini" class="bgimg w3-display-container"
@@ -84,6 +183,18 @@
             <h1 class="w3-xxlarge">Santorini</h1>
         </div>
     </header>
+    <section>
+        <h2>My Experience in Santorini</h2>
+        <p>Santorini was a dream come true. The stunning views, unique architecture and romantic atmosphere made
+            this trip unforgettable.</p>
+        <h3>Highlights</h3>
+        <ul>
+            <li>Watching the sunset in Oia</li>
+            <li>Exploring the charming villages</li>
+            <li>Visiting ancient ruins</li>
+            <li>Sampling local wines</li>
+        </ul>
+    </section>
 
     <!--Phuket-->
     <header id="phuket" class="bgimg w3-display-container"
@@ -93,7 +204,18 @@
             <h1 class="w3-xxlarge">Phuket</h1>
         </div>
     </header>
-
+    <section>
+        <h2>My Experience in Phuket</h2>
+        <p>Phuket was an adventure of a lifetime. The beautiful beaches, vibrant culture and exciting activities made
+            this trip unforgettable.</p>
+        <h3>Highlights</h3>
+        <ul>
+            <li>Relaxing on Patong Beach</li>
+            <li>Exploring the Old Town</li>
+            <li>Visiting the Big Buddha</li>
+            <li>Enjoying water sports and island hopping</li>
+        </ul>
+    </section>
     <!--Bangkok-->
     <header id="bangkok" class="bgimg w3-display-container"
         style="background-image:url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/173/803/original/pexels-egonshotsphotos-2297090.jpg?1757964133')">
@@ -102,6 +224,18 @@
             <h1 class="w3-xxlarge">Bangkok</h1>
         </div>
     </header>
+    <section>
+        <h2>My Experience in Bangkok</h2>
+        <p>Bangkok was a vibrant and exciting city. The rich culture, delicious food and bustling markets made this
+            trip unforgettable.</p>
+        <h3>Highlights</h3>
+        <ul>
+            <li>Visiting the Grand Palace</li>
+            <li>Exploring floating markets</li>
+            <li>Tasting street food</li>
+            <li>Experiencing the nightlife on Khao San Road</li>
+        </ul>
+    </section>
 
     <!--Rome-->
     <header id="rome" class="bgimg w3-display-container"
@@ -111,6 +245,18 @@
             <h1 class="w3-xxlarge">Rome</h1>
         </div>
     </header>
+    <section>
+        <h2>My Experience in Rome</h2>
+        <p>Rome was a journey through history. The ancient ruins, stunning architecture and vibrant culture made this
+            trip unforgettable.</p>
+        <h3>Highlights</h3>
+        <ul>
+            <li>Visiting the Colosseum</li>
+            <li>Exploring the Vatican City</li>
+            <li>Tasting authentic Italian cuisine</li>
+            <li>Wandering through charming neighborhoods like Trastevere</li>
+        </ul>
+    </section>
 
     <!--Madrid-->
     <header id="madrid" class="bgimg w3-display-container"
@@ -120,14 +266,46 @@
             <h1 class="w3-xxlarge">Madrid</h1>
         </div>
     </header>
+    <section>
+        <h2>My Experience in Madrid</h2>
+        <p>Madrid was a vibrant and lively city. The rich culture, delicious food and beautiful art made this trip
+            unforgettable.</p>
+        <h3>Highlights</h3>
+        <ul>
+            <li>Visiting the Prado Museum</li>
+            <li>Exploring Retiro Park</li>
+            <li>Tasting traditional tapas</li>
+            <li>Experiencing the lively atmosphere of Plaza Mayor</li>
+        </ul>
+    </section>
 
     <!--Footer-->
     <footer class="w3-center w3-white w3-padding-16">
         <a href="https://github.com/Monalicous/TravelBacketList.git" target="_blank">
             <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/173/823/original/logo.png?1758019767"
                 alt="My Logo" style="width:100px; height: auto;"></a>
-        <p>&copy; 2025 My Travel Bucket List</p>
+        <p>&copy; 2025 My Travel Advetures</p>
+        <p><em>"Travel is the only thing you buy that makes you richer."</em></p>
     </footer>
+
+    <!--Typing effect script-->
+    <script>
+        let text = "This website is a collection of the destinations I have been lucky enough to visit. Each place holds special memories, unique cultures, and amazing experiences. From the sunsets in Greece to the vibrant streets of Asia and the rich history of Europe.";
+        let typingText = document.getElementById("typing-text");
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                typingText.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(type, 50);
+            }
+        }
+
+        window.onload = type;
+    </script>
 </body>
+
+
 
 </html>
